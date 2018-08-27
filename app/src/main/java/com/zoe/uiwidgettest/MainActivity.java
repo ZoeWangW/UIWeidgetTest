@@ -2,6 +2,7 @@ package com.zoe.uiwidgettest;
 
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutCompat;
@@ -34,21 +35,11 @@ public class MainActivity extends Activity implements View.OnClickListener {
     public void onClick(View v){
         switch (v.getId()){
             case R.id.button:
-                AlertDialog.Builder dialog = new AlertDialog.Builder(MainActivity.this);
-                dialog.setTitle("This is Dialog");
-                dialog.setMessage("Something important.");
-                dialog.setCancelable(false);
-                dialog.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                    }
-                });
-                dialog.setNegativeButton("Cancle",new  DialogInterface.OnClickListener(){
-                    @Override
-                public void onClick(DialogInterface dialog,int which){
-                    }
-                });
-                dialog.show();
+                ProgressDialog progressdialog = new ProgressDialog(MainActivity.this);
+                progressdialog.setTitle("This is ProgressDialog");
+                progressdialog.setMessage("Loading...");
+                progressdialog.setCancelable(true);
+                progressdialog.show();
                 break;
             default:
                 break;
