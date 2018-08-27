@@ -32,7 +32,7 @@
         android:src="@mipmap/ic_launcher"/>
 
     <ProgressBar
-        android:id="@+id/progressNar"
+        android:id="@+id/progress_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
