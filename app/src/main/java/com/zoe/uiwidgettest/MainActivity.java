@@ -31,12 +31,9 @@ public class MainActivity extends Activity implements View.OnClickListener {
     public void onClick(View v){
         switch (v.getId()){
             case R.id.button:
-                if (progressBar.getVisibility() == View.GONE){
-                    progressBar.setVisibility(View.VISIBLE);
-                }
-                else {
-                    progressBar.setVisibility(View.GONE);
-                }
+                int proogress = progressBar.getProgress();
+                proogress = proogress + 10;
+                progressBar.setProgress(proogress);
                 break;
             default:
                 break;
